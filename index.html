@@ -1,183 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>辉创标识 - 专业标识设计制作</title>
+    <title>汇创标识 - 专业设计制作</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", sans-serif;
-        }
-        body {
-            background: #f5f7fa;
-            color: #333;
-        }
-        /* 顶部广告位（可放图片/文字广告） */
-        .top-ad {
-            background: linear-gradient(135deg, #ff7a00, #ff5500);
-            color: white;
-            text-align: center;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        header {
-            background: #1a2332;
-            color: white;
-            padding: 35px 20px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.07);
-        }
-        .card h2 {
-            font-size: 26px;
-            color: #ff5500;
-            margin-bottom: 20px;
-            border-left: 5px solid #ff7a00;
-            padding-left: 15px;
-        }
-        .card p {
-            line-height: 1.9;
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 12px;
-        }
-        /* 业务广告区（图文展示） */
-        .service-ad {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .ad-item {
-            flex: 1;
-            min-width: 280px;
-            background: #fff5e6;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-        }
-        .ad-item h3 {
-            color: #ff5500;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-        /* 底部广告位 */
-        .bottom-ad {
-            background: #1a2332;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-        }
-        .contact {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 14px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Microsoft Yahei", sans-serif; }
+        body { background: #f5f7fa; color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* 顶部广告 */
+        .top-banner { background: linear-gradient(135deg, #ff7a00, #ff5500); color: white; text-align: center; padding: 12px; font-weight: bold; }
+        
+        /* 头部 */
+        header { background: #1a2332; color: white; padding: 40px 20px; text-align: center; }
+        header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        
+        /* 主营业务 */
+        .business { background: white; padding: 40px 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .business h2 { text-align: center; color: #e63946; margin-bottom: 30px; font-size: 2em; border-left: 5px solid #e63946; padding-left: 15px; display: inline-block; }
+        .business-grid { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; text-align: center; }
+        .business-item { flex: 1; min-width: 250px; padding: 20px; background: #fafafa; border-radius: 8px; }
+        .business-item h3 { color: #e63946; margin-bottom: 10px; }
+        
+        /* 案例展示（在主营业务和联系我们中间） */
+        .cases { text-align: center; padding: 40px 20px; background: #fff; margin: 20px 0; border-radius: 10px; }
+        .cases h2 { color: #333; margin-bottom: 25px; font-size: 1.8em; }
+        .case-imgs { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .case-imgs img { width: 280px; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .case-imgs img:hover { transform: scale(1.05); }
+        
+        /* 联系我们（在最下面） */
+        .contact { background: #1a2332; color: white; padding: 40px 20px; text-align: center; margin-top: 20px; }
+        .contact h2 { color: #ff7a00; margin-bottom: 20px; border-left: 5px solid #ff7a00; padding-left: 15px; display: inline-block; }
+        .contact-info { font-size: 1.1em; line-height: 2; }
+        .contact-info a { color: #ff7a00; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <!-- 顶部滚动广告位（可改文字/加图片） -->
-    <div class="top-ad">
-        辉创标识 · 专业定制 | 设计·制作·安装一站式服务 | 品质保障 诚信经营
+
+    <div class="top-banner">
+        承接各类标识定制 · 设计制作安装一体化
     </div>
 
     <header>
-        <h1>辉创标识</h1>
-        <p>专注标识设计 · 精工制作 · 诚信服务</p >
+        <h1>汇创标识</h1>
+        <p>品质铸就品牌 · 设计引领未来</p >
     </header>
 
-    <div class="container">
-        <div class="card">
-            <h2>关于辉创</h2>
-            <p>辉创标识，深耕标识行业多年，专注于各类标识设计、制作、安装一站式服务。</p >
-            <p>秉承“精工细作、品质至上”的理念，为客户提供高性价比、高品质的标识解决方案，诚信可靠，长期合作。</p >
-        </div>
-
-        <div class="card">
-            <h2>主营业务（广告展示区）</h2>
-            <div class="service-ad">
-                <div class="ad-item">
-                    <h3>企业标识</h3>
-                    <p>LOGO墙、形象墙、公司招牌、前台标识</p >
-                </div>
-                <div class="ad-item">
-                    <h3>户外广告</h3>
-                    <p>门头招牌、发光字、灯箱</p >
-                </div>
-                <div class="ad-item">
-                    <h3>导视系统</h3>
-                    <p>楼层指引、科室牌、导向牌、指示牌</p >
-                </div>
+    <!-- 1. 主营业务（最上面） -->
+    <section class="business container">
+        <h2>主营业务（广告展示区）</h2>
+        <div class="business-grid">
+            <div class="business-item">
+                <h3>企业标识</h3>
+                <p>LOGO墙、形象墙、公司招牌、前台标识</p >
             </div>
-
-            
-< img src="微信图片_20260323185607_119_91.jpg" style="max-width:100%; width:600px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
-        <div class="card">
-
-            
-            <h2>联系我们（广告位）</h2>
-            <p style="text-align: center; font-size: 18px; font-weight: bold;">
-                承接各类标识定制 · 设计制作安装一体化
-            </p >
-            <div class="contact" style="text-align: center;">
-                <p>📞 电话：15710672058</p >
-                <p>💬 微信：wxid_mniocjgtmthv22</p >
-                <p>📍 地址：泉州 · 本地服务 快速响应</p >
+            <div class="business-item">
+                <h3>户外广告</h3>
+                <p>门头招牌、发光字、灯箱</p >
+            </div>
+            <div class="business-item">
+                <h3>导视系统</h3>
+                <p>楼层指引、科室牌、导向牌、指示牌</p >
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- 底部广告位（可放二维码/大图） -->
-    <div class="bottom-ad">
-        <h3>辉创标识 · 品质铸就品牌</h3>
-        <p>设计新颖 · 工艺精湛 · 售后无忧</p >
-    </div>
+    <!-- 2. 案例展示（中间） -->
+    <section class="cases container">
+        <h2>案例分享</h2>
+        <div class="case-imgs">
+            < img src="广场.jpg" alt="广场案例">
+            < img src="遇见你.jpg" alt="遇见你案例">
+            < img src="阳光书吧.jpg" alt="阳光书吧案例">
+        </div>
+    </section>
 
-    <footer>
-        © 2026 辉创标识 · 保留所有权利
-    </footer>
+    <!-- 3. 联系我们（最下面） -->
+    <section class="contact">
+        <h2>联系我们（广告位）</h2>
+        <div class="contact-info">
+            <p>☎ 电话：<a href=" ">15710672058</a ></p >
+            <p>💬 微信：wxid_mniocjgtmthv22</p >
+            <p>📍 地址：泉州 · 本地服务 快速响应</p >
+        </div>
+    </section>
+
 </body>
 </html>
-
-<!-- 案例展示 -->
-<div style="text-align:center; margin-top:30px;">
-    <h2 style="color:#333; margin-bottom:20px;">案例展示</h2>
-    <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
-        < img src="广场.jpg" style="width:200px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1);">
-        < img src="遇见你.jpg" style="width:200px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1);">
-        < img src="阳光书吧.jpg" style="width:200px; border-radius:8px; box-shadow:0 0 8px rgba(0,0,0,0.1);">
-    </div>
-</div>
-
-
-
